@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Start"
+        android:id="@+id/btnStart"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time remaining"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnStart"
+        android:id="@+id/txtTimeRemaining"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:weightSum="3"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/txtTimeRemaining"
+        android:orientation="horizontal"
+        android:id="@+id/questionLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:id="@+id/txtFirstNumber"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:id="@+id/txtSign"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:id="@+id/txtSecondNumber"/>
+    </LinearLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/questionLayout"
+        android:layout_marginTop="20dp"
+        android:id="@+id/edtTxtAnswer"
+        android:hint="Enter your answer here!"
+        android:inputType="numberDecimal"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtFinal"
+        android:text="final"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_margin="8dp"
+        android:visibility="invisible"
+        android:layout_below="@id/edtTxtAnswer"
+        android:textColor="@color/black" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtFinal"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="20dp"/>
+
+
+
+</RelativeLayout>
